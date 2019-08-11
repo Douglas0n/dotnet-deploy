@@ -1,12 +1,12 @@
-#CRUD com ASP.NET Core 2.2 e SQLServer Express 
+# CRUD com ASP.NET Core 2.2 e SQLServer Express 
  
 App simples para ser hospedado em servidores Linux (debian-ubuntu) para demonstrar a utilização do ASP.NET Core e o SQLServer na plataforma UNIX.
 *Arquivos de apoio(confg app & confg service) disponíveis em*: 
 [https://github.com/glennc/AspNetCoreConfigFiles](https://github.com/glennc/AspNetCoreConfigFiles)
 
-##Configurações para hospedagem Linux
+## Configurações para hospedagem Linux
 
-####Servidor Nginx(proxy reverso) e Kestrel(do próprio asp.net):
+#### Servidor Nginx(proxy reverso) e Kestrel(do próprio asp.net):
 
 * publicar em: /var/www
 * arquivo do servico Nginx: /lib/systemd/system/nginx.service
@@ -27,7 +27,6 @@ App simples para ser hospedado em servidores Linux (debian-ubuntu) para demonstr
 
 ### Configurações básicas de proxy reverso _não usar em produção!_:
 
-'''
 server {
     listen 80;
     location / {
@@ -39,11 +38,9 @@ server {
         proxy_cache_bypass $http_upgrade;
     }
 }
-'''
 
 ### Configuracoes simples de servico:
 
-'''
 #Simple starter config
 [Unit]
 #80 char maximum
@@ -59,11 +56,9 @@ User=web
 [Install]
 #options are graphical, for GUIs, or multi-user for everthing else.
 WantedBy=multi-user.target
-'''
 
 ### Configuracoes simples de socket:
 
-'''
 #Simple starter config
 [Unit]
 #80 char maximum
@@ -80,7 +75,7 @@ User=web
 [Install]
 #options are graphical, for GUIs, or multi-user for everthing else.
 WantedBy=multi-user.target
-'''
+
 
 
 
