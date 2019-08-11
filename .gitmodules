@@ -1,0 +1,3 @@
+[submodule "dotnet_sandbox"]
+	path = dotnet_sandbox
+	url = ./dotnet_sandbox
